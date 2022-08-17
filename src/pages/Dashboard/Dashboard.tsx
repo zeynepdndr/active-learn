@@ -5,12 +5,7 @@ import Login from "../Login/Login";
 const Dashboard = () => {
   const navigate = useNavigate();
 
-  return (
-    <>
-      {true && <Login />}
-      {false && <>welcome to dashboard</>}
-    </>
-  );
+  return <h1>Dashboard</h1>;
 };
 
 export default Dashboard;
