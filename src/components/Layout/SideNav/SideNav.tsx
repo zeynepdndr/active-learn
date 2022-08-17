@@ -1,40 +1,39 @@
-import { useContext } from "react";
-// import AuthContext from "../../../store/auth-context";
-// import HeaderFavoriteButton from "../HeaderFavoriteButton/HeaderFavoriteButton";
-// import styles from "./SideNav.module.css";
+import { Link } from "react-router-dom";
+import Button from "../../UI/Button/Button";
+import styles from "./SideNav.module.css";
 
-const SideNav = (props: any) => {
-  // const ctx = useContext(AuthContext);
-
+const SideNav: React.FC<any> = (props) => {
   return (
     <header>
-      <div>
-        <nav>
+      <div className={styles["header-left"]}>
+        <nav className={styles.nav}>
           <ul>
             <li>
-              <a href={"/popular"}>Popular</a>
+              <Link to={"/popular"}>Popular</Link>
             </li>
             <li>
-              <a href={"/popular"}>Latest</a>
+              <Link to={"/popular"}>Latest</Link>
             </li>
           </ul>
         </nav>
       </div>
-      <div>
-        <a href={"/"}>
+      <div className={styles.logo}>
+        <Link to={"/"}>
           {/*  */}
           Bookers
-        </a>
+        </Link>
       </div>
-      <div>
+      <div className={styles["header-right"]}>
         {true && (
-          <nav>
+          <nav className={styles.nav}>
             <ul>
               <li>
-                <a href={"/profile"}>Profile</a>
+                <Link to={"/profile"}>Profile</Link>
               </li>
-              <li>{/* <HeaderFavoriteButton onClick={props.onClick} /> */}</li>
               <li></li>
+              <li>
+                <Button className={styles.logout}>Logout</Button>
+              </li>
             </ul>
           </nav>
         )}

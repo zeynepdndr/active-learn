@@ -8,7 +8,7 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<Link to="/dashboard" replace />} />
+        {/* <Route path="/" element={<Link to="/dashboard" replace />} /> */}
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/courses/:course_id" element={<Dashboard />} />
         <Route path="/add-course" element={<Dashboard />} />
