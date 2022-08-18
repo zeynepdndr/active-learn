@@ -10,7 +10,6 @@ const Layout = (props: any) => {
       <main className={styles.main}>
         <>
           <MainNav />
-          {props.children}
         </>
       </main>
     </>

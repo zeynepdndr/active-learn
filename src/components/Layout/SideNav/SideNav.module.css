@@ -3,7 +3,7 @@ header {
   position: fixed;
   top: 0;
   right: 0;
-  height: 4.5rem;
+  height: 7.5rem;
   z-index: 999;
 }
 
@@ -25,11 +25,18 @@ nav ul {
   list-style: none;
   margin: 0;
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  gap: 1rem;
+  justify-content: end;
 }
 
 nav li {
   margin-right: 2.3rem;
+  display: contents;
+}
+nav li img {
+  border-radius: 40%;
+  width: 18%;
 }
 
 nav a {

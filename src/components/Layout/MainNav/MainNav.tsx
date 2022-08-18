@@ -3,7 +3,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Dashboard from "../../../pages/Dashboard/Dashboard";
 import {
   Analytics,
   Class,
@@ -11,10 +10,9 @@ import {
   HomeWork,
   Logout,
   PeopleOutlineSharp,
-  Settings,
   Source,
 } from "@mui/icons-material";
-import logo from "../../../asssets/logo.png";
+import Dashboard from "../../../pages/Dashboard/Dashboard";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -74,6 +72,12 @@ export default function MainNav() {
           borderRight: 1,
           borderColor: "divider",
           backgroundColor: "#357cd9",
+          "& .Mui-selected": {
+            color: "#fcb8d2",
+            fontWeight: 400,
+            borderRadius: "0.75rem",
+          },
+          variant: "fullWidth",
         }}
       >
         <Tab
@@ -110,12 +114,6 @@ export default function MainNav() {
           label="Teachers"
           {...a11yProps(5)}
           icon={<PeopleOutlineSharp />}
-          sx={{ color: "#fff" }}
-        />
-        <Tab
-          label="Setting"
-          {...a11yProps(6)}
-          icon={<Settings />}
           sx={{ color: "#fff" }}
         />
         <Tab
